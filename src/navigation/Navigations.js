@@ -36,7 +36,7 @@ function MyTabs() {
   )
 }
 
-const MainNavigation = () => {
+const Navigations = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -51,4 +51,4 @@ const MainNavigation = () => {
   )
 }
 
-export default MainNavigation
+export default Navigations

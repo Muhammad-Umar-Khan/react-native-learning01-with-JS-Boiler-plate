@@ -1,14 +1,29 @@
 import 'react-native-gesture-handler'
 import React from 'react'
-import Navigations from './navigation/Navigations'
-import { Provider } from 'react-redux'
-import { store } from './stores/index'
+import Splash from './screens/splash/Splash'
+import Login from './screens/login/Login'
+
+import { createStackNavigator } from '@react-navigation/stack'
+import { NavigationContainer } from '@react-navigation/native'
+
+const Stack = createStackNavigator()
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <Navigations />
-    </Provider>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Splash"
+          component={Splash}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 
